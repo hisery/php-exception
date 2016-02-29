@@ -1,0 +1,10 @@
+#使用yii2-advanced中碰到的链接mysql的异常处理
+PDOException 
+
+find / -name mysql*.sock
+
+###修改本地web服务器的php配置####
+vi /etc/php5/apache/php.ini
+pdo_mysql.default_socket=/run/mysqld/mysqld.sock
+mysql.default_socket = /run/mysqld/mysqld.sock
+mysqli.default_socket = /run/mysqld/mysqld.sock
