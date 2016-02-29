@@ -1,0 +1,14 @@
+#使用yii2-advanced版本遇到的无法加载php_mcrypt.so的解决方案
+
+报错关键语句:
+Unable to load dynamic library '/usr/lib/php5/20121212/php_mcrypt.so'
+
+解决过程:
+sudo apt-get remove php5-mcrypt
+sudo apt-get purge php5-mcrypt
+
+apt-get install php5-mcrypt
+/etc/init.d/apache2 restart
+
+分析:
+由于php没有找到动态库文件,一个是安装动态文件,若安装可以使用软链接(这个没试过)
